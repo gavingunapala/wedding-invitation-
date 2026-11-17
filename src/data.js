@@ -7,9 +7,9 @@ export const wedding = {
   bride: 'Oshadi',
   monogram: 'G & O',
 
-  date: '2026-12-12T14:00:00',
-  displayDate: 'December 12, 2026',
-  displayTime: 'Saturday · 2:00 PM',
+  date: '2027-06-20T14:00:00+05:30',
+  displayDate: 'June 20, 2027',
+  displayTime: 'Sunday · 2:00 PM',
 
   venue: {
     name: 'Hilton Colombo',

@@ -1,19 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 460" width="380" height="460">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fdf8e9"/>
-      <stop offset="1" stop-color="#f0e2c4"/>
-    </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e4c662"/>
-      <stop offset="1" stop-color="#c9a227"/>
-    </linearGradient>
-  </defs>
-  <rect width="380" height="460" fill="url(#bg)"/>
-  <circle cx="190" cy="212" r="122" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.5"/>
-  <circle cx="190" cy="212" r="138" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.3"/>
-  <path d="M190 62 q22 -4 14 16 q20 -6 4 18 q20 -6 -4 16 q14 20 -14 8 q-28 12 -14 -8 q-24 -22 -4 -16 q-16 -24 -4 -18 q-8 -20 14 -16 z" fill="url(#gold)" opacity="0.45"/>
-  <text x="190" y="218" text-anchor="middle" font-family="Georgia, serif" font-size="66" fill="#6f5f50">D &amp; E</text>
-  <text x="190" y="336" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#a98f52">Your photo here</text>
-  <circle cx="190" cy="360" r="3" fill="url(#gold)" opacity="0.7"/>
+<rect width="380" height="460" fill="#e7eadf"/>
+<path d="M35 425V190a155 155 0 0 1 310 0v235Z" fill="none" stroke="#d0d7c0"/>
+<path d="M44 416V190a146 146 0 0 1 292 0v226Z" fill="none" stroke="#d0d7c0" stroke-width=".6"/>
+<g stroke="#758268" fill="none" stroke-width="1.2" opacity=".7">
+<path d="M80 350C55 284 101 237 83 157M76 319L51 289M81 288L108 260M86 252L61 222M87 214L109 186M83 175L67 151"/>
+<path d="M76 319Q45 323 43 298Q62 299 76 319ZM81 288Q111 292 117 268Q94 265 81 288ZM86 252Q54 254 50 230Q73 228 86 252ZM87 214Q113 215 120 192Q99 189 87 214ZM83 175Q60 176 56 155Q74 153 83 175Z" fill="#758268" fill-opacity=".08"/>
+<path d="M300 350C325 284 279 237 297 157M304 319L329 289M299 288L272 260M294 252L319 222M293 214L271 186M297 175L313 151"/>
+<path d="M304 319Q335 323 337 298Q318 299 304 319ZM299 288Q269 292 263 268Q286 265 299 288ZM294 252Q326 254 330 230Q307 228 294 252ZM293 214Q267 215 260 192Q281 189 293 214ZM297 175Q320 176 324 155Q306 153 297 175Z" fill="#758268" fill-opacity=".08"/>
+</g>
+<ellipse cx="174" cy="203" rx="35" ry="43" fill="none" stroke="#758268" stroke-width="1.5"/><ellipse cx="209" cy="203" rx="35" ry="43" fill="none" stroke="#758268" stroke-width="1.5"/><path d="m206 157 5-8 6 8-6 7Z" fill="none" stroke="#758268"/>
+<text x="190" y="296" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="32" fill="#758268">G &amp; O</text>
+<text x="190" y="374" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="16" fill="#758268">Together, always</text>
+<circle cx="190" cy="398" r="2" fill="#758268"/>
 </svg>

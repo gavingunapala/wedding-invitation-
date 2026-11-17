@@ -1,43 +1,35 @@
-# Wedding Invitation — Daniel & Emma
+# Wedding Invitation — Gavin & Oshadi
 
-A single-page, scroll-driven 3D wedding invitation built with **React + Vite + React Three Fiber**.
+A responsive React + Vite invitation with a paper envelope opening, botanical artwork, wedding details, countdown, gallery, and email RSVP.
 
 ## Run locally
 
-```
+```sh
 npm install
 npm run dev
 ```
 
-## Build for Vercel
+Open the Local URL printed in the terminal.
 
-```
+The project uses the WebAssembly distribution of esbuild, avoiding the native executable that Windows security blocked on this machine. The override keeps Vite using the same implementation.
+
+## Build and preview
+
+```sh
 npm run build
+npm run preview
 ```
 
-Vercel auto-detects Vite and serves the `dist` output. Push the repo to GitHub and import it on
-[vercel.com](https://vercel.com) — no config needed.
+The production output is in `dist/`.
 
 ## Customize
 
-All text, dates, and photo paths live in **`src/data.js`**. Edit that one file for most changes.
+Edit `src/data.js` for the couple's names, date, venue, story, schedule, gallery image paths, and RSVP details. The countdown date includes Sri Lanka's UTC offset so it is consistent for guests abroad.
 
-### Add your real couple photos
-Replace the placeholders in `public/images/` (or update the paths in `src/data.js`):
+The current RSVP address (`rsvp@example.com`) is a placeholder; replace it with your real address. Check the RSVP deadline before sharing. Both buttons open the guest's email app with an acceptance or decline message; replies are sent when the guest sends that email.
 
-```
-public/images/photo-1.jpg
-public/images/photo-2.jpg
-public/images/photo-3.jpg
-```
+The SVGs in `public/images/` are decorative artwork. Replace their paths in `src/data.js` with your photographs when ready. Update the page title and description in `index.html`, and the initials in the favicon/artwork if changing the couple.
 
-Photo ratio is roughly 5:6 portrait — photos are used in the 3D scene, the gallery,
-and cropped with `object-fit: cover`.
+## Design
 
-### 3D scene
-The 3D polaroid cards are in `src/components/Scene3D.jsx` — scroll and mouse-move driven.
-Tweak keyframes there (position/rotation/opacity per scroll offset) if you want a different motion.
-
-## Sections (separate components, one page)
-
-Hero → Story → Ceremony & Reception → Countdown → Gallery → RSVP → Footer
+Shared colors, typography, envelope geometry, and responsive layouts are in `src/styles.css`. The envelope seal is centered with a separate position wrapper so its opening animation cannot change its alignment. Keyboard navigation, a visible focus indicator, reduced motion, and small portrait/landscape layouts are supported.

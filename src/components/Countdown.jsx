@@ -34,15 +34,15 @@ export default function Countdown() {
   return (
     <section className="countdown">
       <Reveal className="countdown-inner">
-        <span className="eyebrow">Counting down to</span>
-        <h2 className="script-title">{wedding.displayDate}</h2>
+        <span className="eyebrow">Every moment brings us closer</span>
+        <h2 className="script-title">Until we say <em>“I do”</em></h2>
         <div className="count-grid">
           <Tile value={t.days} label="Days" />
           <Tile value={t.hours} label="Hours" />
           <Tile value={t.minutes} label="Minutes" />
           <Tile value={t.seconds} label="Seconds" />
         </div>
-        {t.done && <p className="section-sub">Today is the day!</p>}
+        <p className="section-sub">{t.done ? 'Our forever has begun.' : 'We can’t wait to share this day with you.'}</p>
       </Reveal>
     </section>
   )

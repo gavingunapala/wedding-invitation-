@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import Hero from './components/Hero.jsx'
-import Scene3D from './components/Scene3D.jsx'
 import Story from './components/Story.jsx'
 import EventDetails from './components/EventDetails.jsx'
 import Countdown from './components/Countdown.jsx'
@@ -11,12 +10,17 @@ import EnvelopeIntro from './components/EnvelopeIntro.jsx'
 
 export default function App() {
   const [opened, setOpened] = useState(false)
+  const main = useRef(null)
+  const openInvitation = useCallback(() => {
+    setOpened(true)
+    window.scrollTo(0, 0)
+    requestAnimationFrame(() => main.current?.focus({ preventScroll: true }))
+  }, [])
 
   return (
     <>
-      <Scene3D />
-      <EnvelopeIntro onOpen={() => setOpened(true)} />
-      <main className="page">
+      {!opened && <EnvelopeIntro onOpen={openInvitation} />}
+      <main className="page" ref={main} tabIndex={-1} inert={!opened ? '' : undefined} aria-hidden={!opened ? true : undefined}>
         <Hero opened={opened} />
         <Story />
         <EventDetails />

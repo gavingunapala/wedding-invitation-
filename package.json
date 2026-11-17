@@ -18,6 +18,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "npm:esbuild-wasm@0.24.2",
     "vite": "^5.4.11"
+  },
+  "overrides": {
+    "esbuild": "$esbuild"
   }
 }

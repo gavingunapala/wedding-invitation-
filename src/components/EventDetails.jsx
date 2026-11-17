@@ -1,50 +1,36 @@
 import Reveal from './Reveal.jsx'
+import Botanical from './Botanical.jsx'
 import { wedding } from '../data.js'
-
-function VenueCard({ icon, kicker, title, address }) {
-  return (
-    <Reveal className="venue-card">
-      <span className="venue-icon">{icon}</span>
-      <span className="eyebrow">{kicker}</span>
-      <h3>{title}</h3>
-      <p>{address}</p>
-    </Reveal>
-  )
-}
-
 export default function EventDetails() {
+  const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(wedding.venue.address)}`
   return (
-    <section className="section details">
+    <section className="section details" id="details" aria-labelledby="details-title">
       <Reveal className="section-head">
-        <span className="eyebrow">Save the Date</span>
-        <h2 className="script-title">Ceremony &amp; Reception</h2>
-        <p className="section-sub">{wedding.displayDate} · {wedding.displayTime}</p>
+        <span className="eyebrow">A day to remember</span>
+        <h2 className="script-title" id="details-title">The celebration</h2>
+        <p className="section-sub">{wedding.displayDate} <span aria-hidden="true">·</span> {wedding.displayTime}</p>
       </Reveal>
-
-      <div className="venue-grid venue-single">
-        <VenueCard
-          icon="&#10047;"
-          kicker="Ceremony &amp; Reception"
-          title={wedding.venue.name}
-          address={wedding.venue.address}
-        />
+      <div className="celebration-grid">
+        <Reveal className="venue-card">
+          <Botanical className="venue-botanical" />
+          <span className="eyebrow">Ceremony &amp; reception</span>
+          <h3>{wedding.venue.name}</h3>
+          <p>{wedding.venue.address}</p>
+          <a className="text-link" href={directions} target="_blank" rel="noreferrer">Find your way <span aria-hidden="true">↗</span></a>
+        </Reveal>
+        <Reveal className="timeline" delay={0.15}>
+          <h3 className="timeline-title">A little plan for a lovely day</h3>
+          <ol className="timeline-list">
+            {wedding.schedule.map(s => (
+              <li key={s.label} className="timeline-item">
+                <span className="timeline-time">{s.time}</span>
+                <span className="timeline-dot" aria-hidden="true" />
+                <span className="timeline-body"><strong>{s.label}</strong><small>{s.note}</small></span>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </div>
-
-      <Reveal className="timeline" delay={0.15}>
-        <h3 className="timeline-title">The Order of the Day</h3>
-        <ul className="timeline-list">
-          {wedding.schedule.map((s, i) => (
-            <li key={s.label} className="timeline-item">
-              <span className="timeline-time">{s.time}</span>
-              <span className="timeline-dot" />
-              <span className="timeline-body">
-                <strong>{s.label}</strong>
-                <small>{s.note}</small>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </Reveal>
     </section>
   )
 }

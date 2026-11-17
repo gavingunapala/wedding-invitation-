@@ -3,10 +3,11 @@ import { wedding } from '../data.js'
 
 export default function Story() {
   return (
-    <section className="section story">
+    <section className="section story" id="story" aria-labelledby="story-title">
       <Reveal className="section-head">
         <span className="eyebrow">Our Story</span>
-        <h2 className="script-title">How it all began</h2>
+        <h2 className="script-title" id="story-title">Every love has a story.<br /><em>This is ours.</em></h2>
+        <p className="section-sub">A chance meeting. A thousand little moments. A forever together.</p>
       </Reveal>
 
       <div className="story-grid">
