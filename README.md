@@ -1,6 +1,6 @@
 # Wedding Invitation — Gavin & Oshadi
 
-A responsive React + Vite invitation with a paper envelope opening, botanical artwork, wedding details, countdown, gallery, and email RSVP.
+A responsive React + Vite invitation with a paper envelope opening, botanical artwork, wedding details, countdown, gallery, and WhatsApp RSVP.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ The production output is in `dist/`.
 
 Edit `src/data.js` for the couple's names, date, venue, story, schedule, gallery image paths, and RSVP details. The countdown date includes Sri Lanka's UTC offset so it is consistent for guests abroad.
 
-The current RSVP address (`rsvp@example.com`) is a placeholder; replace it with your real address. Check the RSVP deadline before sharing. Both buttons open the guest's email app with an acceptance or decline message; replies are sent when the guest sends that email.
+Set `rsvpWhatsApp` in `src/data.js` to the receiving WhatsApp number, including its country code. Check the RSVP deadline before sharing. Both buttons use [WhatsApp click to chat](https://faq.whatsapp.com/5913398998672934) to open an acceptance or decline message addressed to that number. Guests can add their names and send the message themselves. RSVP links remain inactive until the number is set.
 
 The SVGs in `public/images/` are decorative artwork. Replace their paths in `src/data.js` with your photographs when ready. Update the page title and description in `index.html`, and the initials in the favicon/artwork if changing the couple.
 

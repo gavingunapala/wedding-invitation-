@@ -44,6 +44,7 @@ export const wedding = {
   //   photo-1.svg, photo-2.svg, photo-3.svg  ->  photo-1.jpg, photo-2.jpg, photo-3.jpg
   photos: ['/images/photo-1.svg', '/images/photo-2.svg', '/images/photo-3.svg'],
 
-  rsvpEmail: 'rsvp@example.com',
+  // WhatsApp RSVP number, including country code.
+  rsvpWhatsApp: '+947123456789',
   rsvpDate: 'November 15, 2026',
 }
