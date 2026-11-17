@@ -2,7 +2,7 @@ import Reveal from './Reveal.jsx'
 import Botanical from './Botanical.jsx'
 import { wedding } from '../data.js'
 export default function EventDetails() {
-  const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(wedding.venue.address)}`
+  const directions = wedding.venue.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(wedding.venue.address)}`
   return (
     <section className="section details" id="details" aria-labelledby="details-title">
       <Reveal className="section-head">
