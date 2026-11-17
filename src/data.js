@@ -14,7 +14,7 @@ export const wedding = {
   venue: {
     name: 'Ariyana Reach Hotel - Maharagama',
     address: 'RWWJ+928, Maharagama 10280, Sri Lanka',
-    mapsUrl: 'https://www.google.com/maps/dir/Ariyana+Reach+Hotel+-+Maharagama,+RWWJ%2B928,+Maharagama+10280//@6.9074944,79.8457856,14z/data=!4m8!4m7!1m5!1m1!1s0x3ae251220b370eb7:0x1906fc0f16d49db5!2m2!1d79.930091!2d6.8459208!1m0?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D',
+    mapsUrl: 'https://www.google.com/maps/dir//Ariyana+Reach+Hotel+-+Maharagama,+RWWJ%2B928,+Maharagama+10280/@6.9074944,79.8457856,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae251220b370eb7:0x1906fc0f16d49db5!2m2!1d79.930091!2d6.8459208?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D',
   },
 
   story: [
